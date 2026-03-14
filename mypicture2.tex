@@ -1,0 +1,26 @@
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.1cm,y=0.1cm]
+	\begin{axis}[
+		xlabel={Time ($t$)},
+		ylabel={Strength of Kilesa},
+		x=0.1cm,y=0.1cm,
+		axis lines=middle,
+		ticks=none,
+		xmin=0.0,
+		xmax=98.0,
+		ymin=0.0,
+		ymax=30.0,
+]
+		\clip(0.,0.) rectangle (80.,30.);
+		\draw[line width=4.pt] (-19.07559855741915,58.96461805652592) -- (32.86694474289657,58.96461805652592);
+		\draw[line width=4.pt] (-19.07559855741915,48.576109396462805) -- (32.86694474289657,48.576109396462805);
+		\draw[line width=2.pt,color=qqwuqq,smooth,samples=100,domain=0.0:80.0] plot(\x,{0.3*(\x)*sin((0.7*(\x))*180/pi)});
+		\begin{scriptsize}
+			\draw [fill=black] (10.531651123760813,58.96461805652592) circle (2.5pt);
+			\draw[color=black] (13.1287782887766,65.067866894313) node {$w = 0.7$};
+			\draw [fill=black] (8.453949391748186,48.576109396462805) circle (2.5pt);
+			\draw[color=black] (11.05107655676397,54.67935823424989) node {$g = 0.3$};
+			\draw[color=qqwuqq] (-26.087841902961774,10.268483712480084) node {$f$};
+		\end{scriptsize}
+	\end{axis}
+\end{tikzpicture}
